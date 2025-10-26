@@ -3,6 +3,7 @@ import type { NextConfig } from 'next'
 const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
+  cacheComponents: true,
 
   images: {
     remotePatterns: [
@@ -15,6 +16,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'avatar.vercel.sh' },
       { protocol: 'https', hostname: 'utfs.io' },
       { protocol: 'https', hostname: 'res.cloudinary.com' },
+      { protocol: 'https', hostname: 'i.imgur.com' },
       { protocol: 'https', hostname: 'images.pexels.com' }
     ]
   }

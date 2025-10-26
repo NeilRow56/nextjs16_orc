@@ -1,7 +1,14 @@
-export default function Home() {
+import Categories from '@/components/categories'
+import { GallerySkeleton } from '@/components/gallery-skeleton'
+
+import { Suspense } from 'react'
+
+export default async function Home() {
   return (
-    <div className='grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-(family-name:--font-geist-sans) sm:p-20'>
-      Home Page
-    </div>
+    <main>
+      <Suspense fallback={<GallerySkeleton />}>
+        <Categories />
+      </Suspense>
+    </main>
   )
 }
